@@ -1,6 +1,8 @@
 FROM ruby:2.5.1
 ENV LANG C.UTF-8
 
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+
 RUN apt-get update -qq && \
     apt-get install -y build-essential \
             libpq-dev \
